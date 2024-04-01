@@ -5,6 +5,7 @@ import "./App.css";
 export default function App() {
   return (
     <div className="main">
+      <h1> <span>Tic</span> Tac Toe</h1>
       <Game />
     </div>
   );
@@ -141,7 +142,7 @@ function Board({ xIsNext, squares, onPlay, onReset }) {
       </div>
       <div className="btn-row">
         <button className="btn" onClick={onReset}>
-          RESET
+          <span>RESET</span>
         </button>
       </div>
     </>

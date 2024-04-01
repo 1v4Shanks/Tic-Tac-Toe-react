@@ -10,31 +10,51 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
+  background-color: #f5e8dd;
 }
 
-.box{
-  border: 1px solid green;
+.main h1 {
+  position: absolute;
+  top: 15px;
+  font-size: 70px;
+  color: #3e3232;
+}
+.main h1 span{
+  color: red;
+}
+.box {
+  background-color: #ffbe98;
   width: 500px;
   height: 400px;
   padding: 30px;
-  border-radius: 5px;
+  border-radius: 8px;
   display: flex;
-  
 }
 
-.game-info{
+.game-info ol{
   margin-left: 70px;
-  color: #fff;
+  list-style: none;
 }
 
-.move-btn{
+.move-btn {
   width: 150px;
   height: 30px;
   margin-bottom: 5px;
   border-radius: 3px;
-  border: none;
-  background: #2bf92b;
+  background: #3e3232;
+  border: 2px solid #BBAB8C;
+  color: #f4efef;
+  font-size: 16px;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+.move-btn:hover{
+  box-shadow: 1px 1px 2px #3e3232,3px -3px 3px #3e3232;
+  letter-spacing: 1px;
+}
+.move-btn:hover .game-info{
+  font-size: 20px;
 }
 
 .square,
@@ -49,10 +69,11 @@
   margin-top: -1px;
   margin-right: -1px;
   text-align: center;
+  color: #f4efef;
 }
 
 .square-red {
-  background: #2bf92b;
+  background: red;
   color: #f4efef;
 }
 
@@ -62,27 +83,53 @@
   display: table;
 }
 
-.status, .status-winner {
+.status,
+.status-winner {
   margin-bottom: 20px;
-  font-size: 20px;
-  color: #fff;
+  font-size: 25px;
+  font-weight: 550;
+  color: #3e3232;
 }
 
-.status-winner{
-  color: #2bf92b;
+.status-winner {
+  color: #994D1C;
 }
 
-.btn-row{
+.btn-row {
   width: 210px;
   text-align: center;
 }
-.btn{
+.btn {
+  width: 100px;
   padding: 10px;
-  background-color: red;
+  font-size: 17px;
+  background-color: #BBAB8C;
   border: none;
-  border-radius: 2px;
-  color: white;
-  margin-top: 20px;
+  border-radius: 6px;
+  color: #ffffff;
+  margin-top: 40px;
   cursor: pointer;
-  
+  text-align: center;
+  position: relative;
+  transition: all .3s;
+}
+
+.btn:hover{
+  letter-spacing: 2px;
+  transform: scale(1.1);
+  background-color: #BBAB8C;
+  box-shadow: 1px 1px 22px #3e3232, 3px -3px 3px #3e3232;
+}
+
+.btn::before{
+  content: '';
+  position: absolute;
+  inset: 3px;
+  background: #3e3232;
+  border-radius: 4px;
+}
+
+.btn span{
+  position: relative;
+  z-index: 2;
 }
